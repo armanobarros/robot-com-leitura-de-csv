@@ -7,5 +7,5 @@ Resource    keywords.robot
 Resource    pages/cadastrar.robot
 
 *** Variables ***
-${CSV_FILE}    path_absolute\\massas.csv
+${CSV_FILE}    C:\\Users\\arman\\Documents\\Alura\\Testes\\Python\\teste02\\estrutura_aluno\\resources\\massas.csv
 

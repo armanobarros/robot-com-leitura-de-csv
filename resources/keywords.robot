@@ -1,10 +1,10 @@
 *** Settings ***
-Resource    main.robot
 Resource    pages/cadastrar.robot
 
 *** Keywords ***
 Dado que preecha o campo de cadastro com dados válidos
     [Arguments]    ${email}    ${password}
+    Wait Until Element Is Visible    ${REG_EMAIL}    timeout=10s
     Input Text    ${REG_EMAIL}    ${email}
     Input Text    ${REG_PASSWORD}    ${password}
     Click Element    ${Cadastrar}
@@ -12,7 +12,7 @@ Dado que preecha o campo de cadastro com dados válidos
 Dado que preecha os campos de login com dados válidos
     [Arguments]    ${email}    ${password}
     Input Text    ${Username}    ${email}
-    Input Text    ${Password}    ${password}
+    Input Text    ${INPUT_Password}    ${password}
     Click Element    ${Login}
 
 Então verifico mensagem de login
